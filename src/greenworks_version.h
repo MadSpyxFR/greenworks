@@ -2,11 +2,11 @@
 // Use of this source code is governed by the MIT license that can be
 // found in the LICENSE file.
 
-#ifndef SRC_STEAM_VERSION_H_
-#define SRC_STEAM_VERSION_H_
+#ifndef SRC_GREENWORKS_VERSION_H_
+#define SRC_GREENWORKS_VERSION_H_
 
 #define GREENWORKS_MAJOR_VERSION 0
-#define GREENWORKS_MINOR_VERSION 9
+#define GREENWORKS_MINOR_VERSION 10
 #define GREENWORKS_PATCH_VERSION 0
 
 #ifndef GREENWORKS_STRINGIFY
@@ -18,4 +18,4 @@
                            GREENWORKS_STRINGIFY(GREENWORKS_MINOR_VERSION) "." \
                            GREENWORKS_STRINGIFY(GREENWORKS_PATCH_VERSION)
 
-#endif  // SRC_STEAM_VERSION_H_
+#endif  // SRC_GREENWORKS_VERSION_H_

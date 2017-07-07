@@ -13,7 +13,8 @@ namespace greenworks {
 
 class SteamEvent : public greenworks::SteamClient::Observer {
  public:
-  SteamEvent(const Nan::Persistent<v8::Object>& persistent_steam_events)
+  explicit SteamEvent(
+      const Nan::Persistent<v8::Object>& persistent_steam_events)
       : persistent_steam_events_(persistent_steam_events) {}
 
   // Override SteamClient::Observer methods.
@@ -31,6 +32,9 @@ class SteamEvent : public greenworks::SteamClient::Observer {
   virtual void OnGameConnectedFriendChatMessage(uint64 raw_steam_id,
                                                 int message_id);
   virtual void OnDLCInstalled(AppId_t dlc_app_id);
+  virtual void OnMicroTxnAuthorizationResponse(uint32 AppID,
+                                               uint64 OrderID,
+                                               bool Autorized);
 
  private:
   const Nan::Persistent<v8::Object>& persistent_steam_events_;
